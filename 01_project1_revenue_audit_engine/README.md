@@ -1,11 +1,3 @@
----
-
-# 📁 PROJECT 1  
-`01_project1_revenue_audit_engine/README.md`
-
----
-
-```markdown
 # Project 1 – Revenue Audit Engine
 
 ## Objective
