@@ -1,36 +1,38 @@
-# Revenue Warehouse with Executive Dashboard
+# Project 4 – Revenue Warehouse with Executive Dashboard
 
-## Overview
+## Objective
 
-This project demonstrates a full revenue data warehouse built using the Olist Brazilian E-Commerce dataset. 
+Build structured revenue tables and executive KPI reporting.
 
-It includes:
-- Raw data ingestion
-- Data cleaning and staging
-- Star schema modeling
-- Fact and dimension tables
-- Simulated marketing spend
-- Executive-level marts
-- Tableau Executive Dashboard
+Focus:
 
-## Architecture
+- Revenue aggregation
+- KPI tracking
+- Margin overview
+- Performance reporting
 
-- DuckDB warehouse
-- Star schema
-- Curated mart layer for analytics
-- Tableau dashboard for executive reporting
+## Required Data
 
-## Key Metrics
+Structured transactional data including:
 
-- Revenue
-- Contribution Margin
-- Marketing Spend
-- MER (Marketing Efficiency Ratio)
-- Blended CAC
-- CM ROAS
+- date
+- revenue
+- cost
+- product
+- region (if applicable)
+
+Place inside: data/
+
+## Components
+
+- Data cleaning
+- Aggregated KPI tables
+- Executive-level summary output
 
 ## How to Run
 
-1. Create virtual environment
-2. Install duckdb
-3. Run:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python 04_project4_revenue_warehouse_dashboard.py

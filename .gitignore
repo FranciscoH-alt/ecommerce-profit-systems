@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Tableau temp/recovery files
+*.twbr
+.~*
+
+# Editor / tooling
+.claude/
+.vscode/
+.idea/
+
+# Misspelled duplicate (superseded by requirements.txt)
+reuirements.txt

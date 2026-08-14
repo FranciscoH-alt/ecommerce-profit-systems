@@ -6,3 +6,8 @@ data/raw/
 *.duckdb
 *.hyper
 *.twbx
+
+# Virtual environment committed by mistake — use requirements.txt instead
+bin/
+lib/
+pyvenv.cfg
