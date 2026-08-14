@@ -154,7 +154,7 @@ print(f"TOTAL IDENTIFIED LEAKAGE: ${total_leakage:,.0f}")
 
 
 # Create Excel report with multiple tabs
-with pd.ExcelWriter('AI_Profit_Margin_Audit_Report.xlsx', engine='openpyxl') as writer:
+with pd.ExcelWriter('Profit_Margin_Audit_Report.xlsx', engine='openpyxl') as writer:
     
     # Tab 1: Executive Summary
     summary_data = {
@@ -200,4 +200,4 @@ with pd.ExcelWriter('AI_Profit_Margin_Audit_Report.xlsx', engine='openpyxl') as 
         'revenue', 'contribution_margin', 'cm_percentage'
     ]].round(2).to_excel(writer, sheet_name='Margin Negative Orders', index=False)
 
-print("\nReport exported: AI_Profit_Margin_Audit_Report.xlsx")
+print("\nReport exported: Profit_Margin_Audit_Report.xlsx")

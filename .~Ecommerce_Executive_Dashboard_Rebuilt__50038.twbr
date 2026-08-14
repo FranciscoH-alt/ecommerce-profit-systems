@@ -1,0 +1,1987 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='mart_product_exec' inline='true' name='federated.1xp534819qjsn012qax580l0sd9v' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_product_exec' name='textscan.1lenbbo1s9aosc1ba7i3g1s3zr6e'>
+            <connection class='textscan' directory='/Users/franciscohenriques/ecommerce-profit-systems/05_project5_growth_analytics_product_intelligence/data/processed' filename='mart_product_exec.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1lenbbo1s9aosc1ba7i3g1s3zr6e' name='mart_product_exec.csv' table='[mart_product_exec#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='date_id' ordinal='0' />
+            <column datatype='string' name='category' ordinal='1' />
+            <column datatype='integer' name='orders' ordinal='2' />
+            <column datatype='real' name='revenue' ordinal='3' />
+            <column datatype='real' name='est_cogs' ordinal='4' />
+            <column datatype='real' name='contribution_margin' ordinal='5' />
+            <column datatype='real' name='avg_cogs_rate' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_id</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_id]</local-name>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias>date_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders]</local-name>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>est_cogs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[est_cogs]</local-name>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias>est_cogs</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contribution_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contribution_margin]</local-name>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias>contribution_margin</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_cogs_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_cogs_rate]</local-name>
+            <parent-name>[mart_product_exec.csv]</parent-name>
+            <remote-alias>avg_cogs_rate</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='mart_product_exec.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B]' role='measure' type='quantitative' />
+      <column caption='Avg Cogs Rate' datatype='real' name='[avg_cogs_rate]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Contribution Margin' datatype='real' name='[contribution_margin]' role='measure' type='quantitative' />
+      <column caption='Date Id' datatype='date' name='[date_id]' role='dimension' type='ordinal' />
+      <column caption='Est Cogs' datatype='real' name='[est_cogs]' role='measure' type='quantitative' />
+      <column caption='Orders' datatype='integer' name='[orders]' role='measure' type='quantitative' />
+      <column caption='Revenue' datatype='real' name='[revenue]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/3xnj30951vq925s_14mj6gj80000gn/T/tableau-temp/#TableauTemp_1y8obel0cvl8mo1gf5hzg10bj1lc.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/13/2026 09:39:56 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date_id</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_product_exec.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1101</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_product_exec.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>75</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_product_exec.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_product_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12118</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>est_cogs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[est_cogs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>est_cogs</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_product_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5727</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contribution_margin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[contribution_margin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>contribution_margin</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_product_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15521</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_cogs_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_cogs_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_cogs_rate</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mart_product_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_product_exec.csv' id='mart_product_exec.csv_D83A49B841624F37993AC6BFE1D5DC0B'>
+            <properties context=''>
+              <relation connection='textscan.1lenbbo1s9aosc1ba7i3g1s3zr6e' name='mart_product_exec.csv' table='[mart_product_exec#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date_id' ordinal='0' />
+                  <column datatype='string' name='category' ordinal='1' />
+                  <column datatype='integer' name='orders' ordinal='2' />
+                  <column datatype='real' name='revenue' ordinal='3' />
+                  <column datatype='real' name='est_cogs' ordinal='4' />
+                  <column datatype='real' name='contribution_margin' ordinal='5' />
+                  <column datatype='real' name='avg_cogs_rate' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='mart_customer_exec' inline='true' name='federated.0ownyud188we2y1g4u29z12dsou5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_customer_exec' name='textscan.1ql8j0r0r1zkq319fqqs611xm0ie'>
+            <connection class='textscan' directory='/Users/franciscohenriques/ecommerce-profit-systems/05_project5_growth_analytics_product_intelligence/data/processed' filename='mart_customer_exec.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ql8j0r0r1zkq319fqqs611xm0ie' name='mart_customer_exec.csv' table='[mart_customer_exec#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='customer_id' ordinal='0' />
+            <column datatype='date' name='first_order_date' ordinal='1' />
+            <column datatype='integer' name='total_orders' ordinal='2' />
+            <column datatype='real' name='revenue' ordinal='3' />
+            <column datatype='real' name='contribution_margin' ordinal='4' />
+            <column datatype='integer' name='is_repeat_customer' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_customer_exec.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer_id]</local-name>
+            <parent-name>[mart_customer_exec.csv]</parent-name>
+            <remote-alias>customer_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_order_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[first_order_date]</local-name>
+            <parent-name>[mart_customer_exec.csv]</parent-name>
+            <remote-alias>first_order_date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[mart_customer_exec.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[mart_customer_exec.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contribution_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contribution_margin]</local-name>
+            <parent-name>[mart_customer_exec.csv]</parent-name>
+            <remote-alias>contribution_margin</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_repeat_customer</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_repeat_customer]</local-name>
+            <parent-name>[mart_customer_exec.csv]</parent-name>
+            <remote-alias>is_repeat_customer</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='mart_customer_exec.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79]' role='measure' type='quantitative' />
+      <column caption='Contribution Margin' datatype='real' name='[contribution_margin]' role='measure' type='quantitative' />
+      <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+      <column caption='First Order Date' datatype='date' name='[first_order_date]' role='dimension' type='ordinal' />
+      <column caption='Is Repeat Customer' datatype='integer' name='[is_repeat_customer]' role='measure' type='quantitative' />
+      <column caption='Revenue' datatype='real' name='[revenue]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/3xnj30951vq925s_14mj6gj80000gn/T/tableau-temp/#TableauTemp_070by9r1u34dkg12dt72z0rw8ldx.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/13/2026 09:41:17 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>customer_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[customer_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customer_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_customer_exec.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>98199</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first_order_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[first_order_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>first_order_date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_customer_exec.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1880</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_customer_exec.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_customer_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20877</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contribution_margin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[contribution_margin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>contribution_margin</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_customer_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31440</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_repeat_customer</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_repeat_customer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_repeat_customer</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_customer_exec.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_customer_exec.csv' id='mart_customer_exec.csv_65A49C3BD89441128F9E08EB7879CE79'>
+            <properties context=''>
+              <relation connection='textscan.1ql8j0r0r1zkq319fqqs611xm0ie' name='mart_customer_exec.csv' table='[mart_customer_exec#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='customer_id' ordinal='0' />
+                  <column datatype='date' name='first_order_date' ordinal='1' />
+                  <column datatype='integer' name='total_orders' ordinal='2' />
+                  <column datatype='real' name='revenue' ordinal='3' />
+                  <column datatype='real' name='contribution_margin' ordinal='4' />
+                  <column datatype='integer' name='is_repeat_customer' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='mart_channel_exec' inline='true' name='federated.0mb5ase0s9rony16qhx5u07yf4jh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_channel_exec' name='textscan.1pm6gqy0gvrf94175rqg50opwqxu'>
+            <connection class='textscan' directory='/Users/franciscohenriques/ecommerce-profit-systems/05_project5_growth_analytics_product_intelligence/data/processed' filename='mart_channel_exec.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1pm6gqy0gvrf94175rqg50opwqxu' name='mart_channel_exec.csv' table='[mart_channel_exec#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='date_id' ordinal='0' />
+            <column datatype='date' name='date' ordinal='1' />
+            <column datatype='string' name='channel' ordinal='2' />
+            <column datatype='real' name='spend' ordinal='3' />
+            <column datatype='real' name='total_revenue' ordinal='4' />
+            <column datatype='real' name='total_contribution_margin' ordinal='5' />
+            <column datatype='real' name='revenue_proxy' ordinal='6' />
+            <column datatype='real' name='contribution_margin_proxy' ordinal='7' />
+            <column datatype='real' name='mer_proxy' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_id</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_id]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>date_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>channel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[channel]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>channel</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spend</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[spend]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>spend</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_contribution_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_contribution_margin]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>total_contribution_margin</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_proxy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue_proxy]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>revenue_proxy</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contribution_margin_proxy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contribution_margin_proxy]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>contribution_margin_proxy</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mer_proxy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mer_proxy]</local-name>
+            <parent-name>[mart_channel_exec.csv]</parent-name>
+            <remote-alias>mer_proxy</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='mart_channel_exec.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582]' role='measure' type='quantitative' />
+      <column caption='Channel' datatype='string' name='[channel]' role='dimension' type='nominal' />
+      <column caption='Contribution Margin Proxy' datatype='real' name='[contribution_margin_proxy]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Date Id' datatype='date' name='[date_id]' role='dimension' type='ordinal' />
+      <column caption='Mer Proxy' datatype='real' name='[mer_proxy]' role='measure' type='quantitative' />
+      <column caption='Revenue Proxy' datatype='real' name='[revenue_proxy]' role='measure' type='quantitative' />
+      <column caption='Spend' datatype='real' name='[spend]' role='measure' type='quantitative' />
+      <column caption='Total Contribution Margin' datatype='real' name='[total_contribution_margin]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/3xnj30951vq925s_14mj6gj80000gn/T/tableau-temp/#TableauTemp_17jqskt0q8n9yq1h23s430aa5gjl.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/13/2026 09:41:41 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date_id</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>853</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>853</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>channel</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[channel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>channel</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>spend</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[spend]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>spend</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2781</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>687</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_contribution_margin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_contribution_margin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_contribution_margin</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>687</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue_proxy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[revenue_proxy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue_proxy</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2673</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contribution_margin_proxy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[contribution_margin_proxy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>contribution_margin_proxy</remote-alias>
+              <ordinal>7</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2673</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mer_proxy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mer_proxy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mer_proxy</remote-alias>
+              <ordinal>8</ordinal>
+              <family>mart_channel_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>988</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_channel_exec.csv' id='mart_channel_exec.csv_246FBEFEA7BA483BB02258833E4BD582'>
+            <properties context=''>
+              <relation connection='textscan.1pm6gqy0gvrf94175rqg50opwqxu' name='mart_channel_exec.csv' table='[mart_channel_exec#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date_id' ordinal='0' />
+                  <column datatype='date' name='date' ordinal='1' />
+                  <column datatype='string' name='channel' ordinal='2' />
+                  <column datatype='real' name='spend' ordinal='3' />
+                  <column datatype='real' name='total_revenue' ordinal='4' />
+                  <column datatype='real' name='total_contribution_margin' ordinal='5' />
+                  <column datatype='real' name='revenue_proxy' ordinal='6' />
+                  <column datatype='real' name='contribution_margin_proxy' ordinal='7' />
+                  <column datatype='real' name='mer_proxy' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='mart_daily_exec' inline='true' name='federated.0endvlx12w15rs1fbat551ff7115' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_daily_exec' name='textscan.1xe8pzx0lfsn7i12lj5iv1cc8nxn'>
+            <connection class='textscan' directory='/Users/franciscohenriques/ecommerce-profit-systems/05_project5_growth_analytics_product_intelligence/data/processed' filename='mart_daily_exec.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1xe8pzx0lfsn7i12lj5iv1cc8nxn' name='mart_daily_exec.csv' table='[mart_daily_exec#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='integer' name='year' ordinal='1' />
+            <column datatype='integer' name='month' ordinal='2' />
+            <column datatype='string' name='year_month' ordinal='3' />
+            <column datatype='integer' name='orders' ordinal='4' />
+            <column datatype='integer' name='customers' ordinal='5' />
+            <column datatype='real' name='revenue' ordinal='6' />
+            <column datatype='real' name='est_cogs' ordinal='7' />
+            <column datatype='real' name='est_payment_fees' ordinal='8' />
+            <column datatype='real' name='contribution_margin' ordinal='9' />
+            <column datatype='real' name='spend' ordinal='10' />
+            <column datatype='real' name='mer' ordinal='11' />
+            <column datatype='real' name='cm_roas' ordinal='12' />
+            <column datatype='real' name='blended_cac_per_order' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[year_month]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>year_month</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[orders]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>orders</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[customers]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>customers</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>est_cogs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[est_cogs]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>est_cogs</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>est_payment_fees</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[est_payment_fees]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>est_payment_fees</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contribution_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contribution_margin]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>contribution_margin</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spend</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[spend]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>spend</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mer</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mer]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>mer</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cm_roas</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cm_roas]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>cm_roas</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>blended_cac_per_order</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[blended_cac_per_order]</local-name>
+            <parent-name>[mart_daily_exec.csv]</parent-name>
+            <remote-alias>blended_cac_per_order</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='mart_daily_exec.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]' role='measure' type='quantitative' />
+      <column caption='Blended Cac Per Order' datatype='real' name='[blended_cac_per_order]' role='measure' type='quantitative' />
+      <column caption='Cm Roas' datatype='real' name='[cm_roas]' role='measure' type='quantitative' />
+      <column caption='Contribution Margin' datatype='real' name='[contribution_margin]' role='measure' type='quantitative' />
+      <column caption='Customers' datatype='integer' name='[customers]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Est Cogs' datatype='real' name='[est_cogs]' role='measure' type='quantitative' />
+      <column caption='Est Payment Fees' datatype='real' name='[est_payment_fees]' role='measure' type='quantitative' />
+      <column caption='Mer' datatype='real' name='[mer]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='Orders' datatype='integer' name='[orders]' role='measure' type='quantitative' />
+      <column caption='Revenue' datatype='real' name='[revenue]' role='measure' type='quantitative' />
+      <column caption='Spend' datatype='real' name='[spend]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Year Month' datatype='string' name='[year_month]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/3xnj30951vq925s_14mj6gj80000gn/T/tableau-temp/#TableauTemp_1inqb91027dg8n15mz4wv1szyc03.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/13/2026 11:55:31 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>774</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year_month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[year_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year_month</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>orders</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>272</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>customers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[customers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>customers</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>272</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>est_cogs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[est_cogs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>est_cogs</remote-alias>
+              <ordinal>7</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>est_payment_fees</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[est_payment_fees]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>est_payment_fees</remote-alias>
+              <ordinal>8</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contribution_margin</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[contribution_margin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>contribution_margin</remote-alias>
+              <ordinal>9</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>spend</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[spend]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>spend</remote-alias>
+              <ordinal>10</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>773</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mer</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mer</remote-alias>
+              <ordinal>11</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cm_roas</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cm_roas]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cm_roas</remote-alias>
+              <ordinal>12</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>blended_cac_per_order</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[blended_cac_per_order]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>blended_cac_per_order</remote-alias>
+              <ordinal>13</ordinal>
+              <family>mart_daily_exec.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_daily_exec.csv' id='mart_daily_exec.csv_F0E0333326E14DD793F9FF8AF55ADA07'>
+            <properties context=''>
+              <relation connection='textscan.1xe8pzx0lfsn7i12lj5iv1cc8nxn' name='mart_daily_exec.csv' table='[mart_daily_exec#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='integer' name='month' ordinal='2' />
+                  <column datatype='string' name='year_month' ordinal='3' />
+                  <column datatype='integer' name='orders' ordinal='4' />
+                  <column datatype='integer' name='customers' ordinal='5' />
+                  <column datatype='real' name='revenue' ordinal='6' />
+                  <column datatype='real' name='est_cogs' ordinal='7' />
+                  <column datatype='real' name='est_payment_fees' ordinal='8' />
+                  <column datatype='real' name='contribution_margin' ordinal='9' />
+                  <column datatype='real' name='spend' ordinal='10' />
+                  <column datatype='real' name='mer' ordinal='11' />
+                  <column datatype='real' name='cm_roas' ordinal='12' />
+                  <column datatype='real' name='blended_cac_per_order' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Blended CAC'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='8'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Blended Cac Per Order' datatype='real' name='[blended_cac_per_order]' role='measure' type='quantitative' />
+            <column-instance column='[blended_cac_per_order]' derivation='Sum' name='[sum:blended_cac_per_order:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0endvlx12w15rs1fbat551ff7115].[sum:blended_cac_per_order:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2BDDE93F-70BD-4FEF-9946-90882D94A80D}' />
+    </worksheet>
+    <worksheet name='Contribution Margin'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='8'>Contribution Margin</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Contribution Margin' datatype='real' name='[contribution_margin]' role='measure' type='quantitative' />
+            <column-instance column='[contribution_margin]' derivation='Sum' name='[sum:contribution_margin:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0endvlx12w15rs1fbat551ff7115].[sum:contribution_margin:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{695C7AF1-BFE6-4623-A631-A9DC68D3006E}' />
+    </worksheet>
+    <worksheet name='Efficiency Metrics'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Blended Cac Per Order' datatype='real' name='[blended_cac_per_order]' role='measure' type='quantitative' />
+            <column caption='Cm Roas' datatype='real' name='[cm_roas]' role='measure' type='quantitative' />
+            <column caption='Mer' datatype='real' name='[mer]' role='measure' type='quantitative' />
+            <column-instance column='[year_month]' derivation='None' name='[none:year_month:nk]' pivot='key' type='nominal' />
+            <column-instance column='[blended_cac_per_order]' derivation='Sum' name='[sum:blended_cac_per_order:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cm_roas]' derivation='Sum' name='[sum:cm_roas:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mer]' derivation='Sum' name='[sum:mer:qk]' pivot='key' type='quantitative' />
+            <column caption='Year Month' datatype='string' name='[year_month]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0endvlx12w15rs1fbat551ff7115].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0endvlx12w15rs1fbat551ff7115].[sum:blended_cac_per_order:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0endvlx12w15rs1fbat551ff7115].[sum:cm_roas:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0endvlx12w15rs1fbat551ff7115].[sum:mer:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0endvlx12w15rs1fbat551ff7115].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0endvlx12w15rs1fbat551ff7115].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0endvlx12w15rs1fbat551ff7115].[none:year_month:nk]</rows>
+        <cols>[federated.0endvlx12w15rs1fbat551ff7115].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{E6CB75DA-C7E3-4781-BDD1-202EB29D6456}' />
+    </worksheet>
+    <worksheet name='MER'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='8'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Mer' datatype='real' name='[mer]' role='measure' type='quantitative' />
+            <column-instance column='[mer]' derivation='Sum' name='[sum:mer:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0endvlx12w15rs1fbat551ff7115].[sum:mer:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{51F4F2C0-D52A-48B1-A865-F88AD9F6145F}' />
+    </worksheet>
+    <worksheet name='Marketing Spend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='8'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Spend' datatype='real' name='[spend]' role='measure' type='quantitative' />
+            <column-instance column='[spend]' derivation='Sum' name='[sum:spend:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0endvlx12w15rs1fbat551ff7115].[sum:spend:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BEE42907-CF7E-462F-BE42-3F59CC620C35}' />
+    </worksheet>
+    <worksheet name='Marketing Spend Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Spend' datatype='real' name='[spend]' role='measure' type='quantitative' />
+            <column-instance column='[spend]' derivation='Sum' name='[sum:spend:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Month-Trunc' name='[tmn:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0endvlx12w15rs1fbat551ff7115].[sum:spend:qk]</rows>
+        <cols>[federated.0endvlx12w15rs1fbat551ff7115].[tmn:date:qk]</cols>
+      </table>
+      <simple-id uuid='{DAF87D20-0837-4301-B016-F722CE89AB0B}' />
+    </worksheet>
+    <worksheet name='Revenue'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='8'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Revenue' datatype='real' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.0endvlx12w15rs1fbat551ff7115].[sum:revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E262C7EC-ABA8-4A7D-94CE-4B2B062BB2F1}' />
+    </worksheet>
+    <worksheet name='Revenue vs Contribution Margin Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_daily_exec' name='federated.0endvlx12w15rs1fbat551ff7115' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0endvlx12w15rs1fbat551ff7115'>
+            <column caption='Contribution Margin' datatype='real' name='[contribution_margin]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Revenue' datatype='real' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[contribution_margin]' derivation='Sum' name='[sum:contribution_margin:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Month-Trunc' name='[tmn:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0endvlx12w15rs1fbat551ff7115].[sum:revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0endvlx12w15rs1fbat551ff7115].[sum:contribution_margin:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0endvlx12w15rs1fbat551ff7115].[sum:revenue:qk] + [federated.0endvlx12w15rs1fbat551ff7115].[sum:contribution_margin:qk])</rows>
+        <cols>[federated.0endvlx12w15rs1fbat551ff7115].[tmn:date:qk]</cols>
+      </table>
+      <simple-id uuid='{6851F265-95F3-4CAF-AFC7-3F83335C5FE6}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Ecommerce Executive Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1000' maxwidth='1400' minheight='1000' minwidth='1400' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98400' id='5' param='vert' type-v2='layout-flow' w='98858' x='571' y='800'>
+            <zone h='4200' id='7' type-v2='title' w='98858' x='571' y='800'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='94200' id='6' type-v2='layout-basic' w='98858' x='571' y='5000'>
+              <zone h='94200' id='8' param='horz' type-v2='layout-flow' w='98858' x='571' y='5000' />
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='16000' id='9' name='Revenue' w='19286' x='714' y='5000' />
+        <zone h='16000' id='10' name='Contribution Margin' w='19286' x='20714' y='5000' />
+        <zone h='16000' id='11' name='Marketing Spend' w='19286' x='40714' y='5000' />
+        <zone h='16000' id='12' name='MER' w='19286' x='60714' y='5000' />
+        <zone h='16000' id='13' name='Blended CAC' w='18571' x='80714' y='5000' />
+        <zone h='34000' id='14' name='Marketing Spend Trend' w='39786' x='714' y='22500' />
+        <zone h='34000' id='15' name='Revenue vs Contribution Margin Trend' w='48571' x='50714' y='22500' />
+        <zone h='39000' id='16' name='Efficiency Metrics' w='98571' x='714' y='58000' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run>Ecommerce Executive Dashboard</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='17' param='vert' type-v2='layout-flow' w='98858' x='571' y='800'>
+                <zone h='4200' id='7' type-v2='title' w='98858' x='571' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='160' h='16000' id='9' is-fixed='true' name='Revenue' w='19286' x='714' y='5000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='160' h='16000' id='10' is-fixed='true' name='Contribution Margin' w='19286' x='20714' y='5000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='160' h='16000' id='11' is-fixed='true' name='Marketing Spend' w='19286' x='40714' y='5000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='160' h='16000' id='12' is-fixed='true' name='MER' w='19286' x='60714' y='5000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='160' h='16000' id='13' is-fixed='true' name='Blended CAC' w='18571' x='80714' y='5000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='34000' id='14' is-fixed='true' name='Marketing Spend Trend' w='48571' x='714' y='22500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='34000' id='15' is-fixed='true' name='Revenue vs Contribution Margin Trend' w='48571' x='50714' y='22500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39000' id='16' is-fixed='true' name='Efficiency Metrics' w='98571' x='714' y='58000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D5F5F927-E116-46BA-A655-A9EF24D84C91}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{972506DF-F8A6-4927-ABE2-0881D42CF29F}' />
+    </window>
+    <window class='worksheet' name='Contribution Margin'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{60F3B9E0-BC56-4607-997E-B16AF11CD179}' />
+    </window>
+    <window class='worksheet' name='Marketing Spend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6DB9E04E-C740-410F-AAC0-AB67D2206578}' />
+    </window>
+    <window class='worksheet' name='MER'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D341214A-4CFC-4A41-968C-1E8D0C490A64}' />
+    </window>
+    <window class='worksheet' name='Blended CAC'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3683CEBE-5F62-4BC2-B775-BB136C21842A}' />
+    </window>
+    <window class='worksheet' name='Marketing Spend Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A4C01AA5-7E49-491C-8B75-C83F503AF0D8}' />
+    </window>
+    <window class='worksheet' name='Revenue vs Contribution Margin Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F0D772FC-CAC6-4F2E-99CB-608137AF69EF}' />
+    </window>
+    <window class='worksheet' name='Efficiency Metrics'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B9B9490A-69AD-46FC-82F7-F95CDB57830D}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Blended CAC' />
+        <viewpoint name='Contribution Margin' />
+        <viewpoint name='Efficiency Metrics' />
+        <viewpoint name='MER' />
+        <viewpoint name='Marketing Spend' />
+        <viewpoint name='Marketing Spend Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue' />
+        <viewpoint name='Revenue vs Contribution Margin Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='14' />
+      <simple-id uuid='{ECBBDF89-5ECF-43FE-9CF9-051CFDD63AA5}' />
+    </window>
+  </windows>
+</workbook>

@@ -257,7 +257,7 @@ print(f"Max safe CAC (180-day payback): ${avg_ltv_180d * cm_pct:.2f}")
 
 ### EXPORT CLIENT REPORT
 # ── EXPORT EXCEL REPORT ────────────────────────────────────
-with pd.ExcelWriter('AI_Profit_LTV_Cohort_Report.xlsx', engine='openpyxl') as writer:
+with pd.ExcelWriter('Profit_LTV_Cohort_Report.xlsx', engine='openpyxl') as writer:
 
     # Tab 1: Executive Summary
     summary = pd.DataFrame({
@@ -304,5 +304,5 @@ with pd.ExcelWriter('AI_Profit_LTV_Cohort_Report.xlsx', engine='openpyxl') as wr
     # Tab 5: Cohort detail
     cohort_revenue.to_excel(writer, sheet_name='Cohort Detail', index=False)
 
-print("\nReport exported: AI_Profit_LTV_Cohort_Report.xlsx")
+print("\nReport exported: Profit_LTV_Cohort_Report.xlsx")
 print("\n--- PROJECT 3 COMPLETE ---")

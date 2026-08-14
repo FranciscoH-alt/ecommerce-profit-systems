@@ -127,7 +127,7 @@ profitable_count = (funnel['risk_classification'] == 'Profitable').sum()
 danger_count = funnel[funnel['risk_classification'].isin(
     ['Margin-Negative', 'Break-Even Risk', 'CAC Danger'])].shape[0]
 
-with pd.ExcelWriter('AI_Profit_Campaign_Risk_Report_v2.xlsx', engine='openpyxl') as writer:
+with pd.ExcelWriter('Profit_Campaign_Risk_Report_v2.xlsx', engine='openpyxl') as writer:
 
     # Tab 1: Executive Summary
     summary = pd.DataFrame({
@@ -184,4 +184,4 @@ with pd.ExcelWriter('AI_Profit_Campaign_Risk_Report_v2.xlsx', engine='openpyxl')
                 'breakeven_cac', 'monthly_profit']].to_excel(
         writer, sheet_name='Profitable Campaigns', index=False)
 
-print("\nReport exported: AI_Profit_Campaign_Risk_Report_v2.xlsx")
+print("\nReport exported: Profit_Campaign_Risk_Report_v2.xlsx")
